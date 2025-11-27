@@ -19,3 +19,4 @@ export const HeadersUsers : string[] = [
   "Creado en ",
   "Ultima actualizacion",
 ]
+
