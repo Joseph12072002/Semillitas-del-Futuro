@@ -7,6 +7,7 @@ import { StackIcon } from '../../../../UI/icons/stack-icon/stack-icon';
 import { ManageMisAlumnos } from '../../components/manage-mis-alumnos/manage-mis-alumnos';
 import { ManageDocentes } from '../../../admin/components/manage-docentes/manage-docentes';
 import { ManageMisActividades } from '../../components/manage-mis-actividades/manage-mis-actividades';
+import { ManageMisGrupos } from '../../components/manage-mis-grupos/manage-mis-grupos';
 
 @Component({
   selector: 'app-docente-home',
@@ -18,10 +19,10 @@ export class DocenteHome{
 asideMenuButtons : AsideMenuButton[]=[
    {
       text : "Mis grupos",
-      icon : UserGroupIcon,
-      componentRelated : ManageDocentes
-    }, 
-   {
+      icon : BriefcaseIcon,
+      componentRelated : ManageMisGrupos
+    },
+    {
       text : "Mis alumnos",
       icon : SchoolhatIcon,
       componentRelated : ManageMisAlumnos
