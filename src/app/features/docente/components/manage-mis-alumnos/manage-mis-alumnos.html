@@ -1,0 +1,9 @@
+<header>
+  <h1>Mis Alumnos</h1>
+</header>
+@if(isDataReady){
+  <app-table [data]="alumnos" [headers]="headers">
+  </app-table>
+}@else{
+  <app-loader></app-loader>
+}
