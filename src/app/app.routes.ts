@@ -6,6 +6,8 @@ import { Bienvenida } from './pages/bienvenida/bienvenida';
 import { AvanceAgua } from './pages/docente/avance_agua/avance_agua';
 import { Docente } from './pages/docente/docente';
 import { DocenteHome } from './features/docente/pages/docente-home/docente-home';
+import { Cuestionario } from './features/docente/pages/cuestionario/cuestionario';
+import { TemarioAgua } from './pages/docente/temario_agua/temario_agua';
 
 export const routes: Routes = [{
     path : "",
@@ -20,6 +22,10 @@ export const routes: Routes = [{
     component : DocenteHome
   },
   {
+    path : "docente/cuestionario/:id",
+    component : Cuestionario
+  },
+  {
     path : "admin",
     component : AdminHome
   },
@@ -27,5 +33,6 @@ export const routes: Routes = [{
     path : "alumno",
     component : Alumno
   }
-  ,{path : "agua",component: AvanceAgua}
+  ,{path : "agua",component: AvanceAgua},
+  
 ]

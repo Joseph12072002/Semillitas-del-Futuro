@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, OnInit, Output, Type } from '@angular/c
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service/auth-service';
 import { SettingsIcon } from '../icons/settings-icon/settings-icon';
+import { LockIcon } from '../icons/lock-icon/lock-icon';
 // Define la estructura de los botones del aside menu
 export interface AsideMenuButton{
   icon : Type<any>
@@ -11,7 +12,7 @@ export interface AsideMenuButton{
 }
 @Component({
   selector: 'app-aside-menu',
-  imports: [NgComponentOutlet,SettingsIcon],
+  imports: [NgComponentOutlet,SettingsIcon,LockIcon],
   templateUrl: './app-aside-menu.html',
   styleUrl: './app-aside-menu.css'
 })

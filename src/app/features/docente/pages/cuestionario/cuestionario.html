@@ -1,0 +1,38 @@
+<div class="cuestionario-container">
+  <header class="cuestionario-header">
+    <button class="btn-volver" (click)="volver()">
+      ← Volver
+    </button>
+    <h1 *ngIf="actividad">{{ actividad.titulo || 'Cuestionario de Cuidado del Agua' }}</h1>
+  </header>
+
+  <div class="cuestionario-content" *ngIf="actividad">
+    <div class="descripcion-actividad">
+      <h2>Descripción</h2>
+      <p>{{ actividad.descripcion }}</p>
+    </div>
+
+    <div class="preguntas-lista">
+      <h2>Preguntas del Cuestionario</h2>
+      
+      <div class="pregunta-card" *ngFor="let pregunta of preguntas; let i = index">
+        <div class="pregunta-numero">Pregunta {{ i + 1 }}</div>
+        <h3 class="pregunta-texto">{{ pregunta.texto }}</h3>
+        
+        <div class="opciones-lista">
+          <div class="opcion" 
+               *ngFor="let opcion of pregunta.opciones; let j = index"
+               [class.opcion-correcta]="j === pregunta.respuestaCorrecta">
+            <span class="opcion-letra">{{ String.fromCharCode(65 + j) }})</span>
+            <span class="opcion-texto">{{ opcion }}</span>
+            <span class="badge-correcta" *ngIf="j === pregunta.respuestaCorrecta">✓ Correcta</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-data" *ngIf="!actividad">
+    <p>Cargando cuestionario...</p>
+  </div>
+</div>
