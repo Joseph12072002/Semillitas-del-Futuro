@@ -1,4 +1,4 @@
-<article class="actividad-card"> 
+<article class="actividad-card" (click)="abrirmodal()"> 
   <div class="card-header">
     <h2 class="card-title">{{ titulo }}</h2>
   </div>
@@ -6,3 +6,27 @@
     <p class="card-description">{{ descripcion }}</p>
   </div>
 </article>  
+
+@if(estadoModal){
+  <modal-layout [modalHeader]="true">
+    <div class="modal-actividad-content">
+      <div class="modal-actividad-header">
+        <h2>{{ titulo }}</h2>
+        <button class="btn-cerrar" (click)="cerrarModal()">&times;</button>
+      </div>
+      
+      <div class="modal-actividad-body">
+        <p class="modal-descripcion">{{ descripcion }}</p>
+        
+        <div class="botones-accion">
+          <button class="btn-asignar" (click)="asignarAGrupo()">
+            Asignar a mi grupo
+          </button>
+          <button class="btn-ver" (click)="verCuestionario()">
+            Ver cuestionario
+          </button>
+        </div>
+      </div>
+    </div>
+  </modal-layout>
+}

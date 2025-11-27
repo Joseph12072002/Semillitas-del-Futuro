@@ -64,3 +64,120 @@
 :host {
   display: block;
 }
+
+/* Estilos del contenido del Modal */
+.modal-actividad-content {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-actividad-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-actividad-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.btn-cerrar {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cerrar:hover {
+  opacity: 0.8;
+}
+
+.modal-actividad-body {
+  padding: 2rem;
+}
+
+.modal-descripcion {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.botones-accion {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-asignar,
+.btn-ver {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-asignar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-asignar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-ver {
+  background: linear-gradient(135deg, #5CB85C 0%, #4CAF50 100%);
+  color: white;
+}
+
+.btn-ver:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+@media (max-width: 768px) {
+  .modal-actividad-header {
+    padding: 1rem;
+  }
+  
+  .modal-actividad-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .modal-actividad-body {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+  }
+  
+  .botones-accion {
+    flex-direction: column;
+  }
+  
+  .btn-asignar,
+  .btn-ver {
+    min-width: 100%;
+  }
+}
