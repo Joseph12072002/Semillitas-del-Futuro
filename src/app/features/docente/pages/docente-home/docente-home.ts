@@ -7,6 +7,7 @@ import { UserIcon } from '../../../../UI/icons/user-icon/user-icon';
 import { ManageAlumnos } from '../../../admin/components/manage-alumnos/manage-alumnos';
 import { ManageDocentes } from '../../../admin/components/manage-docentes/manage-docentes';
 import { ManageMisActividades } from '../../components/manage-mis-actividades/manage-mis-actividades';
+import { ManageMisGrupos } from '../../components/manage-mis-grupos/manage-mis-grupos';
 
 @Component({
   selector: 'app-docente-home',
@@ -19,7 +20,7 @@ asideMenuButtons : AsideMenuButton[]=[
     {
       text : "Mis grupos",
       icon : BriefcaseIcon,
-      componentRelated : ManageDocentes
+      componentRelated : ManageMisGrupos
     },
     {
       text : "Mis alumnos",
