@@ -8,6 +8,7 @@ import { ManageMisAlumnos } from '../../components/manage-mis-alumnos/manage-mis
 import { ManageDocentes } from '../../../admin/components/manage-docentes/manage-docentes';
 import { ManageMisActividades } from '../../components/manage-mis-actividades/manage-mis-actividades';
 import { ManageMisGrupos } from '../../components/manage-mis-grupos/manage-mis-grupos';
+import { BriefcaseIcon } from '../../../../UI/icons/briefcase-icon/briefcase-icon';
 
 @Component({
   selector: 'app-docente-home',

@@ -1,1 +1,15 @@
-<app-grupo-card></app-grupo-card>
+
+@if (informacionlista) {
+    <section class="contenedorgrupos"> 
+        @for (grupo of grupos; track $index) {
+            <app-grupo-card
+            [nombre_grupo]="grupo.nombre"
+            [Id]="grupo.id"
+            (card_seleccionar)="abrirmodal()"></app-grupo-card> 
+        } 
+    </section>
+}@else {<app-loader></app-loader>}
+@if (modalabierto) {
+    <modal-layout
+    (cerrado)="cerrarmodal()"></modal-layout>
+}
